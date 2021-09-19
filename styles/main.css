@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
+
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --dark-blue: #183152;
+    --light-blue: #375D81;
+    --body-text: #E1E6FA;
+
+}
+
+body{
+ 
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    background-image: repeating-linear-gradient(0deg, rgba(79,79,86, 0.51) 0px, rgba(79,79,86, 0.51) 55px,transparent 55px, transparent 110px),repeating-linear-gradient(90deg, rgba(79,79,86, 0.51) 0px, rgba(79,79,86, 0.51) 55px,transparent 55px, transparent 110px),linear-gradient(90deg, rgb(24,49,82),rgb(24,49,82));
+}
+h1,h2,h3{
+    line-height: 1.2;
+    font-family: 'Satisfy', cursive;
+}
+
+a{
+    color:var(--body-text);
+    text-decoration-color: red;
+}
+
+a:hover{
+    color:red;
+}
+
+body#about img{
+    height: 15em;
+}
+
+p{
+    max-width: 50em;
+}
+body{
+    display: grid;
+    grid-template-areas:"head head"
+                        "nav nav"
+                        "main main"
+                        "foot foot";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 1fr auto;
+    color: var(--body-text);
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas:"head head"
+                            "nav main"
+                            "foot foot";
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+}
+
+
+body > *{
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+body > header{
+    grid-area: head;
+}
+body > nav{
+    grid-area: nav;
+}
+
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+/* body > nav ul li{
+    display: inline;
+    padding-right: 1rem;
+
+} */
+
+body > main{
+    grid-area: main;
+    /* background: var(--dark-blue); */
+}
+body > footer{
+    grid-area: foot;
+}
+
+header, footer{
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1, footer h1{
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
