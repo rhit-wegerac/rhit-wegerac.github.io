@@ -91,10 +91,15 @@ body > footer{
 header, footer{
     padding-top: var(--vertical-space);
     padding-bottom: var(--vertical-space);
+    text-align: center;
 }
 
 header h1, footer h1{
     margin: 0;
+}
+
+footer{
+    text-align: center;
 }
 
 body#portfolio ul#portfolioItems{
@@ -105,9 +110,18 @@ body#portfolio ul#portfolioItems{
     padding: 0;
 }
 
+body#resume li{
+    max-width: 25vw;
+}
+
+body#portfolio p#pic1{
+    
+}
+
 @media screen and (min-width: 25em) {
     body#portfolio ul#portfolioItems li {
         flex-basis: 48%;
         padding-right: 2%;
     }
 }
+
