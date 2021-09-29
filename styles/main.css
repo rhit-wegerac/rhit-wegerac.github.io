@@ -114,9 +114,6 @@ body#resume li{
     max-width: 25vw;
 }
 
-body#portfolio p#pic1{
-    
-}
 
 @media screen and (min-width: 25em) {
     body#portfolio ul#portfolioItems li {
